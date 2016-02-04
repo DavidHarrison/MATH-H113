@@ -1,0 +1,82 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amssymb, amsmath, amsthm}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+% Remarks are unordered
+% To unorder something, just add a '*' to before the {} and remove [section]
+% Vice versa to order it
+\theoremstyle{definition}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}{Definition}[section]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+% Useful macros
+% Updated on Feb 1. 2016 - 
+% Removed all my old analysis macros, adding algebra ones
+
+% Turns the square black at the end of the proof. 
+% No reason, I just like it better.
+\renewcommand\qedsymbol{$\blacksquare$}
+
+% Set of Naturals/Ints/Rats/etc
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+% LaTeX's \overline sucks \overbar{x} fits a bit better
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+
+% Note: The use of the above macros is intentionally avoided
+%       below so that all of these macros can be used without 
+%       relying on the others
+% Easy way to write Z/nZ: \modclass{n}
+\newcommand{\modclass}[1]{\mathbb{Z}/#1\mathbb{Z}}
+% Easy way to write (Z/nZ)^x \modunits{n}
+\newcommand{\modunits}[1]{(\mathbb{Z}/#1\mathbb{Z})^{\times}}
+
+% End of macros
+
+\title{Useful Headers}
+\author{Mathew Cha}
+
+\begin{document}
+
+\maketitle
+
+$\N \quad \Z \quad \Q \quad \R \quad \C \quad \overbar{n} \quad \modclass{n} \quad \modunits{n}$\\
+\begin{theorem}
+Every non-constant single-variable polynomial with complex coefficients has at least one complex root. 
+\end{theorem}
+
+\begin{proof}
+Outside the reach of this course.
+\end{proof}
+
+\begin{corollary}
+This is a corollary
+\end{corollary}
+
+\begin{lemma}
+Likewise, a lemma
+\end{lemma}
+
+\begin{definition}
+A \textbf{group} is a set and binary operation with the following properties:
+\end{definition}
+
+\begin{example}
+$\Z$ under addition is a group
+\end{example}
+
+\begin{remark}
+Remarks are useful
+\end{remark}
+
+\end{document}
